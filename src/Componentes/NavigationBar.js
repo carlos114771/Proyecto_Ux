@@ -9,6 +9,7 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import Menu from './Menu.js';
 
 const styles = theme => ({
   root: {
@@ -77,10 +78,10 @@ function SearchAppBar(props) {
       <AppBar position="static">
         <Toolbar>
           <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-            <MenuIcon />
+            <Menu/>
           </IconButton>
           <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            Material-UI
+            Connected Car
           </Typography>
           <div className={classes.grow} />
           <div className={classes.search}>
