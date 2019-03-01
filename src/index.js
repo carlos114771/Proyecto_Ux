@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import NavBar from './Componentes/NavigationBar';
-import Menu from './Componentes/Menu';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 
-<NavBar></NavBar>
+<App/>
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
