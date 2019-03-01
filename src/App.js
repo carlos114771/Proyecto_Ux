@@ -11,7 +11,6 @@ class App extends Component {
       
       <NavBar/>
       <br/>
-      <Login/>
       <Footer/>
 
       </div>
