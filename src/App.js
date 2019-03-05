@@ -13,8 +13,7 @@ class App extends Component {
       <div className="App">
         <NavBar/>
         <br/>
-        {/*<Container style={{borderStyle:'inherit', padding:'150px'}}><Login/></Container>*/}
-        <SignUp/>
+        <Container style={{borderStyle:'inherit', padding:'150px'}}><SignUp/></Container>
         <Footer/>
       </div>
     );
