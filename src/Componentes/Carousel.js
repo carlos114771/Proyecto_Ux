@@ -1,32 +1,35 @@
-import  React  from  'react';
-import  Carousel  from  'semantic-ui-carousel-react';
-import { Image, Button } from  'semantic-ui-react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 import foto1 from '../pictures/carritoprueba1.jpg';
 import foto2 from '../pictures/carritoprueba2.jpg';
-const  App  = () => {
-	let  elements  = [
-		{
-			render:()=>{
-				return <Image  ><img src={foto1}/></Image>
-			}
-		},
-		{
-			render:()=>{
-				return <Image ><img src={foto2}/></Image>
-			}
-	    },
-	]
-	return (
-		<div>
-			<Carousel
-				elements  =  {  elements  }
-				duration  ={3000}
-				animation  ='slide left'
-				showNextPrev  =  {false}
-				showIndicators  ={true}
-			/>
-		</div>
-	)
-
+import foto3 from '../pictures/carritoprueba2.jpg';
+class DemoCarousel extends Component {
+    render() {
+        return (
+				
+						<Carousel 
+						infiniteLoop ={true} 
+						autoPlay={true}
+						useKeyboardArrows={true}
+						centerSlidePercentage= {90}>
+                <div>
+                    <img src={foto1} style={{border: 'groove'}}/>
+                    <p className="legend">Legend 1</p>
+                </div>
+                <div>
+                    <img src={foto2}  style={{border: 'groove'}}/>
+                    <p className="legend">Legend 2</p>
+                </div>
+                <div>
+                    <img src={foto3}  style={{border: 'groove'}}/>
+                    <p className="legend">Legend 3</p>
+                </div>
+            </Carousel>
+					
+        );
+    }
 }
-export  default  App;
+ 
+export default DemoCarousel;
