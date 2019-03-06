@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import NavBar from './NavigationBar';
 import Carousel from './Carousel';
-import Footer from './Footer'
+import Footer from './Footer';
 
 
 class Home extends Component {
