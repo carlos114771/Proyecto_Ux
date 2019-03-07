@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
+import Routes from './Componentes/Routes.js';
+import {HashRouter} from 'react-router-dom';
 
 ReactDOM.render(
-
-<App/>
+    <HashRouter>
+        <Routes/>
+    </HashRouter>
 , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

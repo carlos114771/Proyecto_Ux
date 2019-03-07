@@ -7,20 +7,18 @@ import Footer from './Componentes/Footer';
 import Login from './Componentes/Login';
 import SignUp from './Componentes/SignUp';
 import Hp from './Componentes/Homepage';
+import PropTypes from 'prop-types';
+import Content from './Componentes/Content';
 
 class App extends Component {
+  static propType={
+    children: PropTypes.object.isRequired
+  };
   render() {
+    const {children} =this.props;
     return (
-     <div className="App">
-     <Hp/>
-      {/*<NavBar/>
-        <br />
-        <Container>
-          <Hp />
-
-        </Container>
-        <Container style={{ borderStyle: 'inherit', padding: '150px' }}><SignUp /></Container>
-      <Footer />*/}
+      <div className ="App">
+        <Content body = {children}/>  
       </div>
     );
   }

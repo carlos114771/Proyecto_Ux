@@ -17,7 +17,10 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import logo from '../pictures/connectedcar.PNG';
-
+import Signin from './SignIn.js';
+import { Button } from '@material-ui/core';
+import Dialog from './Dialog';
+import Dialog2 from './Dialog2';
 const styles = theme => ({
   root: {
     width: '100%',
@@ -125,7 +128,7 @@ class PrimarySearchAppBar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMenuClose}>Login</MenuItem>
+        <MenuItem onClick={this.handleMenuClose}><a href="SignIn.js">Login</a></MenuItem>
         <MenuItem onClick={this.handleMenuClose}>Sign in</MenuItem>
       </Menu>
     );
@@ -175,6 +178,9 @@ class PrimarySearchAppBar extends React.Component {
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
+             <Button color="inherit"><Dialog/></Button>
+             <Button color="inherit"><Dialog2/></Button>
+
              
               <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : undefined}
